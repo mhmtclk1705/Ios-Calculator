@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ios Calculator</title>
+    <style>
+        #calculator-div{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,1fr);
+            grid-template-areas: 
+            "A B C D"
+            "E F G H"
+            "I J K L"
+            "M N O P"
+            "R R S T";
+            gap: 0.75rem;
+        }
+        .number0{ grid-area: R;}
+        .number1{ grid-area: M;}
+        .number2{ grid-area: N;}
+        .number3{ grid-area: O;}
+        .number4{ grid-area: I;}
+        .number5{ grid-area: J;}
+        .number6{ grid-area: K;}
+        .number7{ grid-area: E;}
+        .number8{ grid-area: F;}
+        .number9{ grid-area: G;}
+        .button-dot{ grid-area: S;}
+        .button-ac{grid-area: A;}
+        .button-pn{grid-area: B;}
+        .button-modulus{grid-area: C;}
+        .button-division{grid-area: D;}
+        .button-multiplication{grid-area: H;}
+        .button-substraction{grid-area: L;}
+        .button-addition{grid-area: P;}
+        .button-equal{grid-area: T;}
+        .calc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            font-size: 2rem;
+            background: #333;
+            color: white;
+
+        }
+        .number0{
+            justify-content: flex-start;
+            border-radius: 55px;
+            padding-left: 30px;
+            width: 178px;
+        }
+        body{
+            justify-content: center;
+            display: flex;
+            margin: 150px auto;
+        }
+        .container{
+            width: 400px;
+            height: 98%;
+            background-color: black;
+            border-radius: 45px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #screen{
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        #screenup{
+            color: #a5a5a5;
+            letter-spacing: 5px;
+            font-size: 2.5rem;
+            color: #a5a5a5;
+        }
+        #screendown{
+            font-size: 4rem;
+            min-height: 100px;
+            display: block;
+            color: white;
+        }
+        .op{
+            background-color: #f1a33c;
+        }
+        .button{
+            color: black;
+            background: #a5a5a5;
+        }
+        .calc:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <div id="screen">
+          <div id="screenup"></div>
+          <div id="screendown">0</div>
+      </div>
+      <div id="calculator-div">
+      <div id="calculator" class="calc num number0">0</div>
+      <div id="calculator" class="calc num number1">1</div>
+      <div id="calculator" class="calc num number2">2</div>
+      <div id="calculator" class="calc num number3">3</div>
+      <div id="calculator" class="calc num number4">4</div>
+      <div id="calculator" class="calc num number5">5</div>
+      <div id="calculator" class="calc num number6">6</div>
+      <div id="calculator" class="calc num number7">7</div>
+      <div id="calculator" class="calc num number8">8</div>
+      <div id="calculator" class="calc num number9">9</div>
+      <div id="calculator" class="calc op button-subtraction">-</div>
+      <div id="calculator" class="calc button button-ac">AC</div>
+      <div id="calculator" class="calc button button-pn">+/-</div>
+      <div id="calculator" class="calc button button-modulus">%</div>
+      <div id="calculator" class="calc op button-division">÷</div>
+      <div id="calculator" class="calc op button-multiplication">x</div>
+      <div id="calculator" class="calc num number-dot">.</div>
+      <div id="calculator" class="calc op button-addition">+</div>
+      <div id="calculator" class="calc button-equal">=</div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
